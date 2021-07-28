@@ -10,10 +10,6 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
-    lintOptions {
-        checkReleaseBuilds false
-    }
-
     defaultConfig {
         applicationId "com.dicoding.made_1"
         minSdkVersion 21
@@ -47,5 +43,6 @@ android {
 dependencies {
     implementation project(":core")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection DifferentStdlibGradleVersion
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

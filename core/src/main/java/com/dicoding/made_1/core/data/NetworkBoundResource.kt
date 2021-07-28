@@ -1,3 +1,4 @@
+@file:Suppress("RemoveExplicitTypeArguments")
 package com.dicoding.made_1.core.data
 
 import com.dicoding.made_1.core.data.source.remote.network.ApiResponse
