@@ -64,4 +64,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
+    // memory leak solution
+    override fun onBackPressed() {
+        if(isTaskRoot) {
+            finishAfterTransition()
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+    override fun onDestroy() {
+        if(isTaskRoot) {
+            finishAfterTransition()
+        }
+        super.onDestroy()
+    }
 }
